@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  text-align: center;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: white;
+  direction: rtl;
+  padding: 10px;
+}
+
+h1 {
+  margin-top: 15px;
+  font-size: 22px;
+}
+
+/* أزرار الوضع */
+.mode {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.mode button {
+  padding: 8px 12px;
+  border: none;
+  background: #22c55e;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* لوحة اللعب */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: 90vw;
+  max-width: 320px;
+  margin: 25px auto;
+}
+
+/* الخلايا */
+.cell {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* يخليها مربعة */
+  background: white;
+  color: black;
+  font-size: clamp(24px, 8vw, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+  background: #e2e8f0;
+}
+
+/* النص */
+#status {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* زر إعادة */
+.reset {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ef4444;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* 📱 تحسينات للجوال الصغير */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  .mode button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  #status {
+    font-size: 14px;
+  }
+}

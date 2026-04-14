@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>لعبة اكس او</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <h1>🎮 لعبة اكس او</h1>
+
+  <div class="mode">
+    <button onclick="setMode('player')">👥 لاعب ضد لاعب</button>
+    <button onclick="setMode('ai')">🤖 ضد الكمبيوتر</button>
+  </div>
+
+  <div class="board" id="board">
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+  </div>
+
+  <div id="line"></div>
+
+  <p id="status">دور اللاعب X</p>
+
+  <button class="reset" onclick="resetGame()">🔄 إعادة اللعب</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
